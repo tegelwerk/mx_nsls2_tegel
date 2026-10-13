@@ -1,0 +1,31 @@
+id: https://w3id.org/tegel/mx/profile
+name: MX datasets
+schema: dataset.yaml
+search:
+  - protein_name
+  - technique
+  - facility
+  - instrument
+  - is_public
+  - seguid
+  - creation_date
+properties:
+  - technique
+  - facility
+  - instrument
+  - is_public
+  - seguid
+  - pid
+  - size
+  - proposal
+  - wavelength_angstrom
+  - detector
+  - kind
+  - space_group
+  - resolution
+  - completeness
+  - cc_half
+entity:
+  name: protein_name
+  identifier: experiment_id
+  dateCreated: creation_date

@@ -1,0 +1,12 @@
+{
+  "protein_name": "lysozyme",
+  "experiment_id": "amx-lysozyme-001",
+  "creation_date": "2024-06-12T00:00:00Z",
+  "facility": "NSLSII",
+  "technique": "RX",
+  "instrument": "AMX",
+  "wavelength_angstrom": "0.9201",
+  "detector": "Eiger2 XE 16M",
+  "proposal": "311234",
+  "payload_uri": "frames.zarr"
+}

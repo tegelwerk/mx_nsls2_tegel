@@ -1,0 +1,12 @@
+{
+  "shape": [120, 3110, 3269],
+  "data_type": "uint16",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [1, 3110, 3269]
+    }
+  },
+  "zarr_format": 3,
+  "node_type": "array"
+}

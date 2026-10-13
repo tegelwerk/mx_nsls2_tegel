@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tegel-mx"
+version = "0.1.0"
+description = "NSLS-II macromolecular crystallography dataset incarnation."
+requires-python = ">=3.11"
+dependencies = ["tegel-core"]
+
+[project.entry-points."tegel.resource_types"]
+mx-dataset = "tegel.mx.dataserver:RECORD"
+
+[project.entry-points."tegel.extractors"]
+mx-dataset = "tegel.mx.dataserver:MxExtractor"
+
+[project.entry-points."tegel.readers"]
+mx-dataset = "tegel.mx.dataserver:MxReader"
+
+[project.scripts]
+tegel-mx-etl = "tegel.mx.etl:main"
+
+[dependency-groups]
+dev = ["tegel-dataserver", "tegel-actions", "pytest>=8", "httpx", "ruff>=0.8"]
+
+[tool.uv.sources]
+tegel-core = { path = "../tegel/tegel-core", editable = true }
+tegel-dataserver = { path = "../tegel/tegel-base/packages/dataserver", editable = true }
+tegel-actions = { path = "../tegel/tegel-base/packages/actions", editable = true }
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src/tegel"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src", "schema", "tests", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tegel"]

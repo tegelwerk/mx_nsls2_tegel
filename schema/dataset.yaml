@@ -1,0 +1,58 @@
+id: https://w3id.org/tegel/mx/dataset
+name: mx_dataset
+classes:
+  Dataset:
+    tree_root: true
+    attributes:
+      protein_name:
+        range: string
+      experiment_id:
+        range: string
+      creation_date:
+        range: string
+      facility:
+        range: string
+      technique:
+        range: string
+      instrument:
+        range: string
+      is_public:
+        range: string
+      seguid:
+        range: string
+      pid:
+        range: string
+      size:
+        range: string
+      wavelength_angstrom:
+        range: string
+      detector:
+        range: string
+      proposal:
+        range: string
+      kind:
+        range: string
+      space_group:
+        range: string
+      resolution:
+        range: string
+      completeness:
+        range: string
+      cc_half:
+        range: string
+      plugin_id:
+        range: string
+      source_name:
+        range: string
+      key:
+        range: string
+      uuid:
+        range: string
+      payload_uri:
+        range: string
+      resource_type:
+        range: string
+      resource_type_version:
+        range: string
+      relations:
+        range: string
